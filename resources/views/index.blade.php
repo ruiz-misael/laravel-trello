@@ -11,9 +11,10 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
+    <center>LARA TRELLO </center>
  <div id="addTodoListDiv">
         <input id="addTodoListInput" class="comment">
-        <button id="addTodoListButton" class="btn-save">Add new to-do list</button>
+        <button id="addTodoListButton" class="btn-save">Agregar Lista</button>
     </div>
     <style>
     	
@@ -23,9 +24,10 @@
 }
 
 body{
-    /*background-color: rgb(30, 30, 95);*/
-    background-color: rgb(43, 43, 83);
-    font-family: "Open Sans";
+    
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,80,1) 35%, rgba(0,212,255,1) 100%);
+    font-family: "Trebuchet MS";
 }
 
 
@@ -33,6 +35,8 @@ body{
 button{
     outline: none;
     cursor: pointer;
+    border:3px groove #f1f1f1;
+    font-family: "Trebuchet MS";
 }
 
 #addTodoListDiv{
@@ -54,9 +58,9 @@ button{
 
 
 .todoList{
-    /*border: 1px solid red;*/
-    border-radius: 4px;
-    min-height: 100px;
+    border: 1px  groove #f1f1f1;
+    border-radius: 5px;
+    min-height: 200px;
     background: rgb(235, 235, 235);
     padding: 0.7em;
     margin: 1em 0 1em 1em;
@@ -179,7 +183,15 @@ button{
     margin-top: 0.5em;
     
 }
-
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  color: black;
+  text-align: center;
+}
 
     </style>
     <div id="root"></div>
@@ -216,7 +228,7 @@ class todoList{
         this.input = document.createElement('input');
         this.input.classList.add("comment");
         this.button = document.createElement('button');
-        this.button.innerText = 'Add';
+        this.button.innerText = 'agregar';
         this.button.classList.add("btn-save");
         this.button.id = "to-do-list-button";
         this.div = document.createElement('div');
@@ -247,7 +259,7 @@ class Card{
         this.todoList = todoList;
         this.state = {
             text: text,
-            description: "Click to write a description...",
+            description: "Click para agregar detalle...",
             comments: []
         }
         this.render();
@@ -469,6 +481,9 @@ todoList1.input.value = "asdasds";
 todoList1.addToDo();
 
 	});
-</script>	
+</script>
+<div class="footer">
+  <p>M.R</p>
+</div>	
 </body>
 </html>
